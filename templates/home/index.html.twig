@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<nav class="navbar">
+		<div class="logo">
+			<a href="#home"><img width="100px" height="auto" src="{{ asset('images/logo.png') }}"></a>
+		</div>
+		<ul id="menu">
+			<li>
+				<a href="#">La Mariée</a>
+			</li>
+			<li>
+				<a href="#">Robes en couleur</a>
+			</li>
+			<li>
+				<a href="#">la Maison</a>
+			</li>
+			<li>
+				<a href="#">Rendez-vous / Boutique</a>
+			</li>
+		</ul>
+		<div class="icons">
+			<a href="#">
+				<i class="fa-solid fa-user"></i>
+			</a>
+			<a href="#">
+				<i class="fa-solid fa-bag-shopping"></i>
+			</a>
+			<a href="#">
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</a>
+		</div>
+	</nav>
+
+	<div class="body-image" style="background-image: url({{ asset('images/banner.png') }})">
+		<h1>Nos clientes</h1>
+	</div>
+
+	<div class="images-container">
+		{% for image in images %}
+			<a class="img-wrapper">
+				<img src="{{image.url}}">
+				<p>{{image.text}}</p>
+			</a>
+		{% endfor %}
+	</div>
+
+	<footer>
+		<table>
+			<tr>
+				<td>LA MARIEE</td>
+				<td>ROBES EN COULEUR</td>
+				<td>LA MAISON</td>
+				<td>RENDEZ-VOUS / BOUTIQUE</td>
+			</tr>
+			<tr>
+				<td>Cérémonie</td>
+				<td>Collection 2022</td>
+				<td>Nous</td>
+				<td>Prise de rendez-vous au showroom</td>
+			</tr>
+			<tr>
+				<td>Civil</td>
+				<td>Seconde main couleur</td>
+				<td>Blog</td>
+				<td>Sur-Mesure</td>
+			</tr>
+			<tr>
+				<td>Accessoires</td>
+				<td>Intemporels</td>
+				<td>FAQ</td>
+				<td>Essayage virtuel</td>
+			</tr>
+			<tr>
+				<td>Seconde Main</td>
+				<td></td>
+				<td>Contact</td>
+				<td></td>
+			</tr>
+		</table>
+		<a href="image/new">Ajouter une image</a>
+	</footer>
+{% endblock %}

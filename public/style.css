@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+}
+
+.logo {
+    float: left;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: auto;
+    text-align: right;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color: rgb(17, 18, 19);
+    display: block;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin: 20px 5px;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar .icons {
+    margin: auto;
+}
+
+.icons i {
+    margin: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+.body-image {
+    height: 410px;
+    display: grid;
+    place-items: center;
+    color: white;
+    width: 100%;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.images-container .img-wrapper {
+    position: relative;
+    /* To make the child elements position relative to this container */
+    margin: 40px;
+    text-align: center;
+    /* Center the child elements horizontally */
+}
+
+.images-container .img-wrapper p {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 15px;
+    padding: 140px 20px;
+    opacity: 0;
+    width: 100%;
+    height: 98%;
+    transition: opacity 0.3s;
+}
+
+.images-container .img-wrapper:hover p {
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 1;
+}
+
+.images-container .img-wrapper img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #EFEFEF;
+    text-align: center;
+}
+
+table {
+    padding: 30px;
+}
+
+td {
+    width: 27%;
+    padding-bottom: 20px;
+}
+
+table tr:nth-child(1) {
+    font-weight: bold;
+}
